@@ -7,6 +7,10 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+    },{
+      name: 'color',
+      title: 'Color',
+      type: 'colorPicker'
     },
     {
       name: 'slug',
