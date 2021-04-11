@@ -30,6 +30,11 @@ export default {
             title: 'Logo',
             name: 'logo',
             type: 'image',
-        }
+        },
+        {
+            name: 'color',
+            title: 'Color',
+            type: 'colorPicker'
+          }
     ]
 }

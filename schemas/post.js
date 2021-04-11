@@ -36,10 +36,29 @@ export default {
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      title: "Product Category",
+      name: "category",
+      type: "object",
+      fields: [
+        {
+          name: "category",
+          type: "reference",
+          to: [
+            {
+              type: "category",
+            },
+          ],
+        },
+        {
+          name: "subcategory",
+          type: "reference",
+          to: [
+            {
+              type: "subcategory",
+            },
+          ]
+        }
+      ],
     },
     {
       name: 'publishedAt',

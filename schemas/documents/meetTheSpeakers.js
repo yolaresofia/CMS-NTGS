@@ -21,7 +21,7 @@ export default {
           type: "object",
           fields: [
             {
-              name: "name",
+              name: "nameSpeaker",
               title: "Name",
               type: "string",
             },
@@ -30,7 +30,7 @@ export default {
               title: "Slug",
               type: "slug",
               options: {
-                source: "name",
+                source: "nameSpeaker",
                 maxLength: 96,
               },
             },

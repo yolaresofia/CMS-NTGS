@@ -13,7 +13,10 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "color-picker"
+    "color-picker",
+    "dashboard-widget-netlify",
+    "@sanity/dashboard",
+    "@sanity/production-preview"
   ],
   "env": {
     "development": {
@@ -30,6 +33,14 @@
     {
       "name": "part:@sanity/desk-tool/structure",
       "path": "./structure/index.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js" 
     }
   ]
 }
