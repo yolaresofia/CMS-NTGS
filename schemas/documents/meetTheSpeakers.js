@@ -58,7 +58,7 @@ export default {
           ],
           preview: {
             select: {
-              title: "name",
+              title: "nameSpeaker",
               media: "image",
             },
           },
