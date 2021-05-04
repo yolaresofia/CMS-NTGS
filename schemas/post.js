@@ -7,10 +7,6 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-    },{
-      name: 'color',
-      title: 'Color',
-      type: 'colorPicker'
     },
     {
       name: 'slug',
@@ -69,6 +65,11 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    },
+    {
+      name: 'tags',
+      title: 'tags',
+      type: 'tags',
     },
   ],
 

@@ -3,12 +3,17 @@ export default {
     name: "subcategory",
     title: "subCategory",
     fields: [
-     
       {
         name: "id",
         title: "id",
         type: "string",
-      },{
+      },
+      {
+        name: "description",
+        title: "description",
+        type: "string",
+      },
+      {
         name: "slug",
         title: "slug",
         type: 'slug',
