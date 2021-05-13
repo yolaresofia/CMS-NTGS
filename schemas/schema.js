@@ -12,10 +12,7 @@ import post from './post'
 import author from './author'
 import home from './documents/home'
 import omoss from './documents/about'
-import archives from './documents/archives'
 import xtraPage from './documents/xtraPage'
-import meetTheSpeakers from './documents/meetTheSpeakers'
-import fullProgramme from './documents/fullProgramme'
 import event from './objects/event';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,9 +30,6 @@ export default createSchema({
     event,
     xtraPage,
     category,
-    fullProgramme,
-    meetTheSpeakers,
-    archives,
     home,
     omoss,
     // When added to this list, object types can be used as

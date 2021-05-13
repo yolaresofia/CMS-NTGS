@@ -5,13 +5,6 @@ export default {
     // __experimental_actions: ["update", "publish"],
     fields: [
         {
-            title: 'Video Background',
-            name: 'video',
-            type: 'file',
-            options: {
-                accept: 'video/*'
-            },
-        },{
             title: 'Text',
             name: 'text',
             type: 'string',
@@ -25,10 +18,5 @@ export default {
               },
             ],
           },
-        {
-            title: 'Logo',
-            name: 'logo',
-            type: 'image',
-        }
     ]
 }
