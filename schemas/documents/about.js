@@ -1,20 +1,13 @@
 export default {
-    name: 'about',
-    title: 'About',
+    name: 'omoss',
+    title: 'Om Oss',
     type: 'document',
     // __experimental_actions: ["update", "publish"],
 
     fields: [
         {
-            title: 'Video Background',
-            name: 'video',
-            type: 'file',
-            options: {
-                accept: 'video/*'
-            },
-        },{
-            title: 'Text',
-            name: 'text',
+            title: 'Title',
+            name: 'title',
             type: 'string',
         },{
             title: "About",
@@ -26,10 +19,5 @@ export default {
               },
             ],
           },
-        {
-            title: 'Logo',
-            name: 'logo',
-            type: 'image',
-        }
     ]
 }

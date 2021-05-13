@@ -11,7 +11,7 @@ import subcategory from './subcategory'
 import post from './post'
 import author from './author'
 import home from './documents/home'
-import about from './documents/about'
+import omoss from './documents/about'
 import archives from './documents/archives'
 import xtraPage from './documents/xtraPage'
 import meetTheSpeakers from './documents/meetTheSpeakers'
@@ -37,7 +37,7 @@ export default createSchema({
     meetTheSpeakers,
     archives,
     home,
-    about,
+    omoss,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     // blockContent,
