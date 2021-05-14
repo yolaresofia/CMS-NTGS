@@ -1,81 +1,62 @@
 export default {
-  name: 'post',
-  title: 'Post',
-  type: 'document',
+  name: "post",
+  title: "Post",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
       },
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: { type: "author" },
     },
     {
-      title: "Product Category",
-      name: "category",
-      type: "object",
-      fields: [
-        {
-          name: "category",
-          type: "reference",
-          to: [
-            {
-              type: "category",
-            },
-          ],
-        },
-        {
-          name: "subcategory",
-          type: "reference",
-          to: [
-            {
-              type: "subcategory",
-            },
-          ]
-        }
-      ],
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: "body",
+      title: "Body",
+      type: "blockContent",
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    },
-    {
-      name: 'tags',
-      title: 'tags',
-      type: 'tags',
+      name: "tags",
+      title: "tags",
+      type: "tags",
     },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
+      title: "title",
+      author: "author.name",
+      media: "mainImage",
     },
     prepare(selection) {
-      const {author} = selection
+      const { author } = selection;
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`,
-      })
+      });
     },
   },
-}
+};

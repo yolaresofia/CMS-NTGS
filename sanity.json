@@ -17,7 +17,9 @@
     "dashboard-widget-netlify",
     "@sanity/dashboard",
     "@sanity/production-preview",
-    "autocomplete-tags"
+    "autocomplete-tags",
+    "note-field",
+    "order-documents"
   ],
   "env": {
     "development": {
