@@ -30,11 +30,6 @@ export default {
       to: { type: "author" },
     },
     {
-      name: "publishedAt",
-      title: "Published at",
-      type: "datetime",
-    },
-    {
       name: "body",
       title: "Body",
       type: "blockContent",

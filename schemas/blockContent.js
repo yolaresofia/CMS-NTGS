@@ -15,31 +15,11 @@ const TitleStyle = (props) => (
     {props.children}
   </span>
 );
+const htmlRender = ({ value }) => {
+  const { code } = value;
 
-const highlightIcon = () => (
-  <span
-    style={{
-      fontWeight: "bold",
-      backgroundColor: "green",
-      color: "white",
-      padding: "2px",
-    }}
-  >
-    GB
-  </span>
-);
-const highlightRender = (props) => (
-  <div
-    style={{
-      backgroundColor: "green",
-      color: "white",
-      width: "96%",
-      padding: "3%",
-    }}
-  >
-    <p> {props.children}</p>
-  </div>
-);
+  return <div dangerouslySetInnerHTML={{ __html: code + '' }}/>;
+};
 
 export default {
   title: "Block Content",
@@ -68,7 +48,7 @@ export default {
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
       ],
-      lists: [{ title: "Bullet", value: "bullet" }],
+      lists: [{ title: "Bullet", value: "bullet" },{ title: 'Numbered', value: 'number' }],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -79,14 +59,6 @@ export default {
           { title: "Code", value: "code" },
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" },
-          {
-            title: "Highlight",
-            value: "highlight",
-            blockEditor: {
-              icon: highlightIcon,
-              render: highlightRender,
-            },
-          },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -111,6 +83,26 @@ export default {
     {
       type: "image",
       options: { hotspot: true },
+    },
+    {
+      type: "video"
+    },{
+      name: "html",
+      title: "html",
+      type: "object",
+      preview: {
+        select: {
+          code: 'code'
+        },
+        component: htmlRender
+      },
+      fields: [
+        {
+          name: "code",
+          type: "text",
+          title: "code",
+        },
+      ],
     },
   ],
 };
