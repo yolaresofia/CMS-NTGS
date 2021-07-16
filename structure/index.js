@@ -3,6 +3,7 @@ import S from '@sanity/desk-tool/structure-builder'
 const hiddenDocTypes = {
   home: 'Home',
   omoss: 'Om Oss',
+  navlinks: 'Navigation Links'
 }
 
 export default () =>

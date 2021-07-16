@@ -1,6 +1,6 @@
 export default {
-  name: "xtraPage",
-  title: "Extra Page",
+  name: "miscPage",
+  title: "MiscPage",
   type: "document",
   // __experimental_actions: ["update", "publish"],
 

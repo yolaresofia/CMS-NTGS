@@ -10,9 +10,11 @@ import category from './category'
 import subcategory from './subcategory'
 import post from './post'
 import author from './author'
+import navlinks from './navlinks'
 import home from './documents/home'
 import omoss from './documents/about'
 import xtraPage from './documents/xtraPage'
+
 import video from './video';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,9 +30,11 @@ export default createSchema({
     subcategory,
     category,
     xtraPage,
+   
     author,
     home,
     omoss,
+    navlinks,
     video,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
