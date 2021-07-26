@@ -11,10 +11,13 @@
 import React from "react";
 
 const TitleStyle = (props) => (
-  <span style={{ fontFamily: "Garamond", fontSize: "2em" }}>
+  <span className="Blockquote_quote_1iAu4 text-blocks_blockquote_1qkwn">
     {props.children}
   </span>
 );
+const highlightIcon = () => (
+  <span style={{fontWeight: 'bold'}}>"Q"</span>
+  )
 const htmlRender = ({ value }) => {
   const { code } = value;
 
@@ -46,7 +49,7 @@ export default {
         { title: "H2", value: "h2" },
         { title: "H3", value: "h3" },
         { title: "H4", value: "h4" },
-        { title: "Quote", value: "blockquote" },
+        
       ],
       lists: [{ title: "Bullet", value: "bullet" },{ title: 'Numbered', value: 'number' }],
       // Marks let you mark up inline text in the block editor.
@@ -59,6 +62,10 @@ export default {
           { title: "Code", value: "code" },
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" },
+          { title: "Quote", value: "blockquote",
+          blockEditor: {
+            render: TitleStyle, icon:highlightIcon
+          } },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
