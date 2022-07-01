@@ -14,6 +14,7 @@ import navlinks from './navlinks'
 import home from './documents/home'
 import omoss from './documents/about'
 import xtraPage from './documents/xtraPage'
+import settings from './documents/settings'
 
 import video from './video';
 // Then we give our schema to the builder and provide the result to Sanity
@@ -30,7 +31,7 @@ export default createSchema({
     subcategory,
     category,
     xtraPage,
-   
+    settings,
     author,
     home,
     omoss,
@@ -40,4 +41,5 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     // blockContent,
   ]),
+
 })
